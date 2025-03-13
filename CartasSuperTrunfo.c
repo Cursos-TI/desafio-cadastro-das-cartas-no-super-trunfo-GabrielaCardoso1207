@@ -6,7 +6,7 @@ int main() {
     char codigodacarta1[3], codigodacarta2[3]; //Definindo variável tipo char (string) para o Código da Carta.
     char nomedacidade1[50], nomedacidade2[50]; //Definindo variável tipo char (string) para o Nome da Cidade.
     int populacao1, pontosturisticos1, populacao2, pontosturisticos2; //Definindo variável tipo inteira para Número de Habitantes e Quantidade de Pontos Turísticos.
-    float area1, pib1, area2, pib2; //Definindo variável tipo float para Área em km² e Produto Interno Bruto (PIB).
+    float area1, pib1, area2, pib2, pibpercapita1, pibpercapita2, densidade1, densidade2; //Definindo variável tipo float para Área em km² e Produto Interno Bruto (PIB).
     
     printf("Bem vindo ao Jogo de Cartas Super Trunfo Países! Para começar insira os dados de duas cartas!\n"); //Apresentação do Jogo
     
@@ -31,6 +31,9 @@ int main() {
     printf("Quantos pontos turísticos essa cidade possui? \n");
     scanf("%i", &pontosturisticos1);//Alocando o dado inserido como definição da variável "pontosturisticos1"
 
+    pibpercapita1 = pib1 / populacao1;
+    densidade1 = populacao1 / area1;
+
     printf("\nVamos para a segunda carta!\n");//Seguindo para as entradas de dados da carta número dois.
     
     printf("Insira uma letra, entre 'A' e 'H' que represente um Estado: \n");
@@ -54,6 +57,9 @@ int main() {
     printf("Quantos pontos turísticos essa cidade possui? \n");
     scanf("%i", &pontosturisticos2);//Alocando o dado inserido como definição da variável "pontosturisticos2"
 
+    pibpercapita2 = pib2 / populacao2;
+    densidade2 = populacao2 / area2;
+
 //Compilado dos dados imputados para visualização do jogador.
     //Carta 01
     printf("\nCarta 1:\n");
@@ -64,6 +70,8 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de pontos turísticos: %i\n", pontosturisticos1);
+    printf("O PIB per Capita é: %f\n", pibpercapita1);
+    printf("A Densidade Populacional é: %f hab/km²", densidade1);
 
     //Carta 02
     printf("\nCarta 2:\n");
@@ -74,6 +82,8 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de pontos turísticos: %i\n", pontosturisticos2);
+    printf("O PIB per Capita é: %f\n", pibpercapita2);
+    printf("A Densidade Populacional é: %f hab/km²", densidade2);
 
     printf("\nPronto! Você inseriu os dados das duas cartas do jogo!\n");
 
