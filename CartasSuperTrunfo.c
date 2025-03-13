@@ -31,6 +31,7 @@ int main() {
     printf("Quantos pontos turísticos essa cidade possui? \n");
     scanf("%i", &pontosturisticos1);//Alocando o dado inserido como definição da variável "pontosturisticos1"
 
+    //Calculo de PIB Per Capita e Densidade Populacional Carta 01
     pibpercapita1 = pib1 / populacao1;
     densidade1 = populacao1 / area1;
 
@@ -57,6 +58,7 @@ int main() {
     printf("Quantos pontos turísticos essa cidade possui? \n");
     scanf("%i", &pontosturisticos2);//Alocando o dado inserido como definição da variável "pontosturisticos2"
 
+    //Calculo de PIB Per Capita e Densidade Populacional Carta 02
     pibpercapita2 = pib2 / populacao2;
     densidade2 = populacao2 / area2;
 
