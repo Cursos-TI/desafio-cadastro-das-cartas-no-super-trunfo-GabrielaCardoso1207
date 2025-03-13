@@ -8,7 +8,7 @@ int main() {
     int populacao1, pontosturisticos1, populacao2, pontosturisticos2; //Definindo variável tipo inteira para Número de Habitantes e Quantidade de Pontos Turísticos.
     float area1, pib1, area2, pib2; //Definindo variável tipo float para Área em km² e Produto Interno Bruto (PIB).
     
-    printf("Bem vindo ao Jogo de Cartas Super Trunfo! Para começar insira os dados de duas cartas!\n"); //Apresentação do Jogo
+    printf("Bem vindo ao Jogo de Cartas Super Trunfo Países! Para começar insira os dados de duas cartas!\n"); //Apresentação do Jogo
     
     printf("\nVamos começar pela primeira carta. Insira uma letra, entre 'A' e 'H' que represente um Estado: \n");
     scanf(" %c", &estado1); //Alocando o dado inserido como definição da variável "estado1"
