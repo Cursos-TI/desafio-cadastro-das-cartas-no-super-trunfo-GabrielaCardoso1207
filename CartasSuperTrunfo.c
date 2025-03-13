@@ -71,7 +71,7 @@ int main() {
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de pontos turísticos: %i\n", pontosturisticos1);
     printf("O PIB per Capita é: %f\n", pibpercapita1);
-    printf("A Densidade Populacional é: %f hab/km²", densidade1);
+    printf("A Densidade Populacional é: %f hab/km² \n", densidade1);
 
     //Carta 02
     printf("\nCarta 2:\n");
@@ -83,7 +83,7 @@ int main() {
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de pontos turísticos: %i\n", pontosturisticos2);
     printf("O PIB per Capita é: %f\n", pibpercapita2);
-    printf("A Densidade Populacional é: %f hab/km²", densidade2);
+    printf("A Densidade Populacional é: %f hab/km² \n", densidade2);
 
     printf("\nPronto! Você inseriu os dados das duas cartas do jogo!\n");
 
