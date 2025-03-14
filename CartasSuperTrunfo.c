@@ -8,7 +8,7 @@ int main() {
     int pontosturisticos1, pontosturisticos2; //Definindo variável tipo inteira para Número de Habitantes e Quantidade de Pontos Turísticos.
     float area1, pib1, area2, pib2, pibpercapita1, pibpercapita2, densidade1, densidade2; //Definindo variável tipo float para Área em km² e Produto Interno Bruto (PIB).
     unsigned long int populacao1, populacao2;
-    float superpoder1, superpoder2, calculopopulacao, calculoarea, calculopib, calculoturistico, calculopercapita, calculodensidade;
+    float superpoder1, superpoder2;
 
     printf("Bem vindo ao Jogo de Cartas Super Trunfo Países! Para começar insira os dados de duas cartas!\n"); //Apresentação do Jogo
     
@@ -68,14 +68,7 @@ int main() {
     superpoder1 = populacao1 + area1 + pib1 + pontosturisticos1 + pibpercapita1 + densidade1;
     superpoder2 = populacao2 + area2 + pib2 + pontosturisticos2 + pibpercapita2 + densidade2;
 
-    //Comparando Cartas
-    calculopopulacao = populacao1>populacao2;
-    calculoarea = area1>area2;
-    calculopib = pib1>pib2;
-    calculoturistico = pontosturisticos1>pontosturisticos2;
-    calculopercapita = pibpercapita1>pibpercapita2;
-    calculodensidade = densidade1>densidade2;
-
+    
 //Compilado dos dados imputados para visualização do jogador.
     //Carta 01
     //printf("\nCarta 1:\n");
