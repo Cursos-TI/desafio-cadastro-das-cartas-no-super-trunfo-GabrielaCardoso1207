@@ -5,9 +5,10 @@ int main() {
     char estado1, estado2; //Definindo variável tipo char para Letra que represente o Estado..
     char codigodacarta1[3], codigodacarta2[3]; //Definindo variável tipo char (string) para o Código da Carta.
     char nomedacidade1[50], nomedacidade2[50]; //Definindo variável tipo char (string) para o Nome da Cidade.
-    int populacao1, pontosturisticos1, populacao2, pontosturisticos2; //Definindo variável tipo inteira para Número de Habitantes e Quantidade de Pontos Turísticos.
+    int pontosturisticos1, pontosturisticos2; //Definindo variável tipo inteira para Número de Habitantes e Quantidade de Pontos Turísticos.
     float area1, pib1, area2, pib2, pibpercapita1, pibpercapita2, densidade1, densidade2; //Definindo variável tipo float para Área em km² e Produto Interno Bruto (PIB).
-    
+    unsigned long int populacao1, populacao2;
+
     printf("Bem vindo ao Jogo de Cartas Super Trunfo Países! Para começar insira os dados de duas cartas!\n"); //Apresentação do Jogo
     
     printf("\nVamos começar pela primeira carta. Insira uma letra, entre 'A' e 'H' que represente um Estado: \n");
@@ -20,7 +21,7 @@ int main() {
     scanf("%s", &nomedacidade1); //Alocando o dado inserido como definição da variável "nomedacidade1"
 
     printf("Qual o número de habitantes desta cidade? \n");
-    scanf("%i", &populacao1);//Alocando o dado inserido como definição da variável "populacao1"
+    scanf("%lu", &populacao1);//Alocando o dado inserido como definição da variável "populacao1"
 
     printf("Qual é a área da cidade em quilômetros quadrados? \n");
     scanf("%f", &area1);//Alocando o dado inserido como definição da variável "area1"
@@ -47,7 +48,7 @@ int main() {
     scanf("%s", &nomedacidade2);//Alocando o dado inserido como definição da variável "nomedacidade2"
 
     printf("Qual o número de habitantes desta cidade? \n");
-    scanf("%i", &populacao2);//Alocando o dado inserido como definição da variável "populacao2"
+    scanf("%lu", &populacao2);//Alocando o dado inserido como definição da variável "populacao2"
 
     printf("Qual é a área da cidade em quilômetros quadrados? \n");
     scanf("%f", &area2);//Alocando o dado inserido como definição da variável "area2"
@@ -68,7 +69,7 @@ int main() {
     printf("Estado: %c\n", estado1);
     printf("Código: %s\n", codigodacarta1);
     printf("Nome da Cidade: %s\n", nomedacidade1);
-    printf("População: %i habitantes\n", populacao1);
+    printf("População: %lu habitantes\n", populacao1);
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de pontos turísticos: %i\n", pontosturisticos1);
@@ -80,7 +81,7 @@ int main() {
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigodacarta2);
     printf("Nome da Cidade: %s\n", nomedacidade2);
-    printf("População: %i habitantes\n", populacao2);
+    printf("População: %lu habitantes\n", populacao2);
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de pontos turísticos: %i\n", pontosturisticos2);
