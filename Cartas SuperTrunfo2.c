@@ -68,8 +68,12 @@ int main() {
     superpoder1 = populacao1 + area1 + pib1 + pontosturisticos1 + pibpercapita1 + densidade1;
     superpoder2 = populacao2 + area2 + pib2 + pontosturisticos2 + pibpercapita2 + densidade2;
 
-    printf("O Super Poder da Carta 1 é %.2f. O Super Poder da Carta 2 é %.2f\n", superpoder1, superpoder2);
+    //Mostrando o atributo a ser comparado e o valor dele em cada carta
+    printf("Comparação de cartas (Atributo: Super Poder)\n");
+    printf("O Super Poder da Carta 1 é %.2f \n", superpoder1);
+    printf("O Super Poder da Carta 2 é %.2f \n", superpoder2);
    
+    //Usando a lógica if-else para validar a carta vencedora.
     if (superpoder1>superpoder2){
         printf("Carta 1 venceu!\n");
     }else{
