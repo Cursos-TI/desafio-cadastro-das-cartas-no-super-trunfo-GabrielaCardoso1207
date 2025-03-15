@@ -75,9 +75,9 @@ int main() {
    
     //Usando a lógica if-else para validar a carta vencedora.
     if (superpoder1>superpoder2){
-        printf("Carta 1 venceu!\n");
+        printf("Carta 1 (%s) venceu!\n", nomedacidade1);
     }else{
-        printf("Carta 2 venceu!\n");
+        printf("Carta 2 (%s) venceu!\n", nomedacidade2);
     }
     return 0;
 }
