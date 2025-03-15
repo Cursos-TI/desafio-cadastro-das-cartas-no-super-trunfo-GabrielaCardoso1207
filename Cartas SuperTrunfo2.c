@@ -68,28 +68,12 @@ int main() {
     superpoder1 = populacao1 + area1 + pib1 + pontosturisticos1 + pibpercapita1 + densidade1;
     superpoder2 = populacao2 + area2 + pib2 + pontosturisticos2 + pibpercapita2 + densidade2;
 
-    printf("O Super Poder da Carta 1 é %f. O Super Poder da Carta 2 é %f\n");
+    printf("O Super Poder da Carta 1 é %.2f. O Super Poder da Carta 2 é %.2f\n", superpoder1, superpoder2);
    
     if (superpoder1>superpoder2){
         printf("Carta 1 venceu!\n");
     }else{
-        printf("Carta 2 venceu!\n")
+        printf("Carta 2 venceu!\n");
     }
-
-    // Comparação de atributos
-    printf("População: %s\n", populacao1 > populacao2 ? "Carta 1 venceu" : "Carta 2 venceu");
-
-    printf("Área: %s\n", area1 > area2 ? "Carta 1 venceu" : "Carta 2 venceu");
-
-    printf("PIB: %s\n", pib1 > pib2 ? "Carta 1 venceu" : "Carta 2 venceu");
-
-    printf("Pontos Turísticos: %s\n", pontosturisticos1 > pontosturisticos2 ? "Carta 1 venceu" : "Carta 2 venceu");
-
-    printf("Densidade Populacional: %s\n", densidade1 < densidade2 ? "Carta 1 venceu" : "Carta 2 venceu");
-
-    printf("PIB Per Capita: %s\n", pibpercapita1 > pibpercapita2 ? "Carta 1 venceu" : "Carta 2 venceu");
-
-    printf("Super Poder: %s\n", superpoder1 > superpoder2 ? "Carta 1 venceu" : "Carta 2 venceu");
-
     return 0;
 }
