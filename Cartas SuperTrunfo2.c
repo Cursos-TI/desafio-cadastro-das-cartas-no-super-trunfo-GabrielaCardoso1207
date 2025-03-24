@@ -4,8 +4,8 @@ int main() {
     //Definindo variáveis de duas cartas do jogo. Cada variável é identificada com números 1 ou 2, que representam o número da carta.
     char estado1, estado2; //Definindo variável tipo char para Letra que represente o Estado..
     char codigodacarta1[3], codigodacarta2[3]; //Definindo variável tipo char (string) para o Código da Carta.
-    char nomedacidade1[50], nomedacidade2[50]; //Definindo variável tipo char (string) para o Nome da Cidade.
-    int pontosturisticos1, pontosturisticos2; //Definindo variável tipo inteira para Número de Habitantes e Quantidade de Pontos Turísticos.
+    char nomedacidade1[50], nomedacidade2[50], atributojogador1, atributojogador2, atributojogador3, atributojogador4; //Definindo variável tipo char (string) para o Nome da Cidade.
+    int pontosturisticos1, pontosturisticos2, somaatributos, somaatributos2; //Definindo variável tipo inteira para Número de Habitantes e Quantidade de Pontos Turísticos.
     float area1, pib1, area2, pib2, pibpercapita1, pibpercapita2, densidade1, densidade2; //Definindo variável tipo float para Área em km² e Produto Interno Bruto (PIB).
     unsigned long int populacao1, populacao2;
     float superpoder1, superpoder2;
@@ -68,16 +68,76 @@ int main() {
     superpoder1 = populacao1 + area1 + pib1 + pontosturisticos1 + pibpercapita1 + densidade1;
     superpoder2 = populacao2 + area2 + pib2 + pontosturisticos2 + pibpercapita2 + densidade2;
 
-    //Mostrando o atributo a ser comparado e o valor dele em cada carta
-    printf("Comparação de cartas (Atributo: Super Poder)\n");
-    printf("O Super Poder da Carta 1 é %.2f \n", superpoder1);
-    printf("O Super Poder da Carta 2 é %.2f \n", superpoder2);
+    //Menu interativo para jogador escolher dois atributos numéricos diferentes da Carta 1
+    printf("\nEscolha dois atributos da Carta 1 para comparação nesta rodada.\n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Pontos Turísticos\n");
+    printf("5. PIB Per Capita\n");
+    printf("6. Densidade Demográfica\n");
+    printf("Escolha o primeiro atributo: ");
+    scanf(" %i", &atributojogador1);
+    printf("Escolha o segundo atributo: ");
+    scanf(" %i", &atributojogador2);
    
-    //Usando a lógica if-else para validar a carta vencedora.
-    if (superpoder1>superpoder2){
-        printf("Carta 1 (%s) venceu!\n", nomedacidade1);
-    }else{
-        printf("Carta 2 (%s) venceu!\n", nomedacidade2);
-    }
-    return 0;
-}
+    //Menu interativo para jogador escolher dois atributos numéricos diferentes da Carta 2
+    printf("\nEscolha dois atributos da Carta 2 para comparação nesta rodada.\n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Pontos Turísticos\n");
+    printf("5. PIB Per Capita\n");
+    printf("6. Densidade Demográfica\n");
+    printf("Escolha o primeiro atributo: ");
+    scanf(" %i", &atributojogador3);
+    printf("Escolha o segundo atributo: ");
+    scanf(" %i", &atributojogador4);
+   
+      // Comparar as somas dos atributos selecionados
+      int soma1 = 0, soma2 = 0;
+
+      switch (atributojogador1) {
+          case 1: soma1 += populacao1; break;
+          case 2: soma1 += area1; break;
+          case 3: soma1 += pib1; break;
+          case 4: soma1 += pontosturisticos1; break;
+          case 5: soma1 += pibpercapita1; break;
+          case 6: soma1 += densidade1; break;
+      }
+      switch (atributojogador2) {
+          case 1: soma1 += populacao1; break;
+          case 2: soma1 += area1; break;
+          case 3: soma1 += pib1; break;
+          case 4: soma1 += pontosturisticos1; break;
+          case 5: soma1 += pibpercapita1; break;
+          case 6: soma1 += densidade1; break;
+      }
+      switch (atributojogador3) {
+          case 1: soma2 += populacao2; break;
+          case 2: soma2 += area2; break;
+          case 3: soma2 += pib2; break;
+          case 4: soma2 += pontosturisticos2; break;
+          case 5: soma2 += pibpercapita2; break;
+          case 6: soma2 += densidade2; break;
+      }
+      switch (atributojogador4) {
+          case 1: soma2 += populacao2; break;
+          case 2: soma2 += area2; break;
+          case 3: soma2 += pib2; break;
+          case 4: soma2 += pontosturisticos2; break;
+          case 5: soma2 += pibpercapita2; break;
+          case 6: soma2 += densidade2; break;
+      }
+  
+      // Comparar os valores
+      if (soma1 > soma2) {
+          printf("A Carta 1 venceu!\n");
+      } else if (soma1 < soma2) {
+          printf("A Carta 2 venceu!\n");
+      } else {
+          printf("Empate!\n");
+      }
+  
+      return 0;
+  }
